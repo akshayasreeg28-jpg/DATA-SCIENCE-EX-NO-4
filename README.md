@@ -44,7 +44,6 @@ df = pd.read_csv('bmi.csv')
 
 print("Original Dataset:")
 print(df.head())
-<img width="360" height="187" alt="image" src="https://github.com/user-attachments/assets/7c48a260-6c25-4073-9592-abeb865cd405" />
 df=df.dropna()
 df_std = df.copy()
 scaler_std = StandardScaler()
@@ -52,33 +51,39 @@ df_std[['Height', 'Weight']] = scaler_std.fit_transform(df_std[['Height', 'Weigh
 
 print("\nStandard Scaled Data:")
 print(df_std.head())
-<img width="430" height="227" alt="image" src="https://github.com/user-attachments/assets/27ff17d3-c425-4db5-9b61-f7dba08aad35" />
 df_minmax = df.copy()
 scaler_minmax = MinMaxScaler()
 df_minmax[['Height', 'Weight']] = scaler_minmax.fit_transform(df_minmax[['Height', 'Weight']])
 
 print("\nMin-Max Scaled Data:")
 print(df_minmax.head())
-<img width="443" height="222" alt="image" src="https://github.com/user-attachments/assets/7dcbb094-cf01-4c71-acfc-752dec4798ec" />
+
 df_maxabs = df.copy()
 scaler_maxabs = MaxAbsScaler()
 df_maxabs[['Height', 'Weight']] = scaler_maxabs.fit_transform(df_maxabs[['Height', 'Weight']])
 
 print("\nMaxAbs Scaled Data:")
 print(df_maxabs.head())
-<img width="372" height="205" alt="image" src="https://github.com/user-attachments/assets/c3692587-28f1-4b4d-8031-60293ccacd2c" />
+
 df_robust = df.copy()
 scaler_robust = RobustScaler()
 df_robust[['Height', 'Weight']] = scaler_robust.fit_transform(df_robust[['Height', 'Weight']])
 
 print("\nRobust Scaled Data:")
 print(df_robust.head())
-<img width="387" height="227" alt="image" src="https://github.com/user-attachments/assets/f40a4d57-18b3-455b-aee4-a8c7a359a2bb" />
 print("\nFeature Scaling Completed Successfully.")
 ```
 
 # RESULT:
        # INCLUDE YOUR RESULT HERE
+<img width="360" height="187" alt="image" src="https://github.com/user-attachments/assets/7c48a260-6c25-4073-9592-abeb865cd405" />
+<img width="430" height="227" alt="image" src="https://github.com/user-attachments/assets/27ff17d3-c425-4db5-9b61-f7dba08aad35" />
+<img width="443" height="222" alt="image" src="https://github.com/user-attachments/assets/7dcbb094-cf01-4c71-acfc-752dec4798ec" />
+<img width="372" height="205" alt="image" src="https://github.com/user-attachments/assets/c3692587-28f1-4b4d-8031-60293ccacd2c" />
+<img width="387" height="227" alt="image" src="https://github.com/user-attachments/assets/f40a4d57-18b3-455b-aee4-a8c7a359a2bb" />
+
+
+
 Thus to read the given data and perform Feature Scaling and Feature Selection process and save the
 data to a file is implemented.
 
